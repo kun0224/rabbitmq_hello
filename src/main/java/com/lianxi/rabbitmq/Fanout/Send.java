@@ -23,6 +23,8 @@ public class Send {
         // 发布消息到Exchange
         channel.basicPublish(EXCHANGE_NAME, "", null, message.getBytes());
         System.out.println(" [生产者] Sent '" + message + "'");
+
+
         channel.close();
         connection.close();
     }
