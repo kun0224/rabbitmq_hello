@@ -31,11 +31,10 @@ public class Recv02 {
                 //super.handleDelivery(consumerTag, envelope, properties, body);
                 // body 即消息体
                 String msg = new String(body);
-                System.out.println(" [消费者1] received : " + msg + "!");
+                System.out.println(" [消费者2] received : " + msg + "!");
             }
 
         };
-
         // 监听队列，自动返回完成
         channel.basicConsume(QUEUE_NAME, true, consumer);
 
