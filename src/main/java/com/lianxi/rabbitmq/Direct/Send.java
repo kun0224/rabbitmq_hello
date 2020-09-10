@@ -26,9 +26,9 @@ public class Send {
         String message ="hello Direct";
 
         //发送消息
-        channel.basicPublish(EXCHANGE_NAME, "", null, message.getBytes());
+        channel.basicPublish(EXCHANGE_NAME, "direct", null, message.getBytes());
 
-        System.out.println("[生产者]sent"+message+"!");
+        System.out.println("[生产者]sent:"+message+"!");
 
     }
 
