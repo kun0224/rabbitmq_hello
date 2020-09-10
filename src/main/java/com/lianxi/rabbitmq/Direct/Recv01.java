@@ -36,7 +36,6 @@ public class Recv01 {
                 System.out.println("[消费者1]："+s+"!");
             }
         };
-
         channel.basicConsume(QUEUE_NAME, true, consumer);
     }
 

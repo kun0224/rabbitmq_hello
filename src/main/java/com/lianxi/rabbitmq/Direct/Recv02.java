@@ -23,8 +23,8 @@ public class Recv02 {
         channel.queueDeclare(QUEUE_NAME, false, false, false, null);
 
         //绑定消息队列到交换机
-        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "direct02");
-        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "insert01");
+        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "direc");
+        channel.queueBind(QUEUE_NAME, EXCHANGE_NAME, "inser");
 
         //定义队列的消费者
         DefaultConsumer consumer = new DefaultConsumer(channel){
